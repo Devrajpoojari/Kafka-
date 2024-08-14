@@ -1,0 +1,23 @@
+Start Zookeeper 
+
+C:\kafka_2.13-3.8.0>bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+Start Kafka Server
+
+C:\kafka_2.13-3.8.0> .\bin\windows\kafka-server-start.bat .\config\server.properties
+
+Kafka Console :
+ 1) Create new topic with kafka topics : 
+   C:\kafka_2.13-3.8.0> .\bin\windows\kafka-topics.bat --create --topic user-topic --bootstrap-server localhost:9092
+ 2) produce example message with kafka-console-producer
+    C:\kafka_2.13-3.8.0> .\bin\windows\kafka-console-producer.bat --topic user-topic --bootstrap-server localhost:9092
+ 3) Consume the messages with kafka-console-consumer :
+   C:\kafka_2.13-3.8.0>  .\bin\windows\kafka-console-consumer.bat --topic user-topic --from-beginning --bootstrap-server localhost:9092
+
+
+
+
+
+
+
+
